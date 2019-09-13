@@ -12,9 +12,6 @@ import SessionService from '../../Services/SessionService';
 const drawerWidth = 240;
 
 const useStyles = makeStyles((theme) => ({
-	drawerContainer: {
-		maxWidth: drawerWidth,
-	},
 	grow: {
 		flexGrow: 1,
 	},

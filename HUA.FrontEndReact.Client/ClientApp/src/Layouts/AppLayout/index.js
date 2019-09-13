@@ -1,3 +1,3 @@
-import Component from './AppLayout.component';
+import Component from './AppLayout.container';
 
 export default Component;
