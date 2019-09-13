@@ -14,7 +14,7 @@ import MoreIcon from '@material-ui/icons/MoreVert';
 import Toolbar from '@material-ui/core/Toolbar';
 import Divider from '@material-ui/core/Divider';
 import { Link } from 'react-router-dom';
-import logo from '../../Images/user.png';
+import logo from '../../images/user.png';
 
 const drawerWidth = 240;
 

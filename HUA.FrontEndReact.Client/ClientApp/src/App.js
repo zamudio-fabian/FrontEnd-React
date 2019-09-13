@@ -1,8 +1,8 @@
 import * as React from 'react';
 import { BrowserRouter } from 'react-router-dom';
-import './App.css';
-import Router from './Router';
-import history from './lib/history';
+import './App.scss';
+import Router from './router';
+import history from './utils/history';
 
 class App extends React.Component {
 	render() {

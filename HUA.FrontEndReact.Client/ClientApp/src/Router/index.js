@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { Route, Switch, withRouter } from 'react-router-dom';
 import ProtectedRoute from './ProtectedRoute';
-import Utils from '../lib/Utils';
+import Utils from '../utils/Utils';
 
 const Router = () => {
 	const AppLayout = Utils.getRoute('/').component;

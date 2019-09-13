@@ -3,9 +3,9 @@ import ReactDOM from 'react-dom';
 import * as moment from 'moment';
 import { Provider } from 'react-redux';
 import App from './App';
-import './index.css';
-import initializeStores from './lib/storeInitializer';
-import SessionService from './Services/SessionService';
+import './index.scss';
+import initializeStores from './utils/storeInitializer';
+import SessionService from './services/SessionService';
 
 moment.locale('es');
 const store = initializeStores();

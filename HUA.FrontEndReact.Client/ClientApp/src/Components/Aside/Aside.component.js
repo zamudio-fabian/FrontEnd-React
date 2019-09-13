@@ -2,7 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { withRouter } from 'react-router-dom';
 import AsideContainer from './Aside.container';
-import SessionService from '../../Services/SessionService';
+import SessionService from '../../services/SessionService';
 
 const logout = (history) => {
 	SessionService.logout(history);

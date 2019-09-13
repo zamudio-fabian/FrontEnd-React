@@ -1,5 +1,5 @@
 // import AppConsts from './appconst';
-import { routers } from '../Router/router.config';
+import { routers } from '../router/router.config';
 
 class Utils {
 	getPageTitle = (pathname) => {

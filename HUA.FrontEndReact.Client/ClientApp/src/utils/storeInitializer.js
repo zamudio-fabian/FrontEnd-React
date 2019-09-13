@@ -2,7 +2,7 @@ import { createStore, combineReducers, applyMiddleware, compose } from 'redux';
 import createSagaMiddleware from 'redux-saga';
 import logger from 'redux-logger';
 import { reducer as formReducer } from 'redux-form';
-import SessionService from '../Services/SessionService';
+import SessionService from '../services/SessionService';
 import initializeSagas from './sagasInitializer';
 
 const SessionStore = SessionService.getReducer();

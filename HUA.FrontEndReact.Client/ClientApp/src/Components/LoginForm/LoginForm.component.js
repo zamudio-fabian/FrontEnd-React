@@ -8,8 +8,8 @@ import TextField from '@material-ui/core/TextField';
 import { Field, reduxForm, Form } from 'redux-form';
 import Typography from '@material-ui/core/Typography';
 import { withRouter } from 'react-router-dom';
-import SessionService from '../../Services/SessionService';
-import './LoginForm.style.css';
+import SessionService from '../../services/SessionService';
+import './LoginForm.style.scss';
 
 function submit(values, history) {
 	return SessionService.login(values.username, values.password, history);

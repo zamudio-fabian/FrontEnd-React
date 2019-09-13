@@ -2,12 +2,11 @@ import * as React from 'react';
 import { Redirect, Switch } from 'react-router-dom';
 import DocumentTitle from 'react-document-title';
 import Grid from '@material-ui/core/Grid';
-import Footer from '../../Components/Footer';
-import Header from '../../Components/Header';
-import Aside from '../../Components/Aside';
-import ProtectedRoute from '../../Router/ProtectedRoute';
-import { privateRouters } from '../../Router/router.config';
-import Utils from '../../lib/Utils';
+import Header from '../../components/Header';
+import Aside from '../../components/Aside';
+import ProtectedRoute from '../../router/ProtectedRoute';
+import { privateRouters } from '../../router/router.config';
+import Utils from '../../utils/Utils';
 import './PrivateLayout.style.css';
 
 class PrivateLayout extends React.Component {
@@ -91,9 +90,6 @@ class PrivateLayout extends React.Component {
 							/>
 						</Switch>
 					</Grid>
-				</Grid>
-				<Grid className="footerContainer">
-					<Footer />
 				</Grid>
 			</Grid>
 		);

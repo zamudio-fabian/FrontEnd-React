@@ -1,5 +1,4 @@
-// @flow
-import LoadableComponent from '../Components/Loadable/index';
+import LoadableComponent from '../components/Loadable/index';
 
 export const privateRouters = [
 	{
@@ -9,7 +8,7 @@ export const privateRouters = [
 		name: 'private',
 		title: 'Private',
 		component: LoadableComponent(() =>
-			import('../Layouts/PrivateLayout')
+			import('../layouts/PrivateLayout')
 		),
 		isLayout: true,
 		showInMenu: false,
@@ -21,7 +20,7 @@ export const privateRouters = [
 		requiredAuthentication: true,
 		name: 'private',
 		title: 'Private admin',
-		component: LoadableComponent(() => import('../Pages/Home')),
+		component: LoadableComponent(() => import('../pages/Home')),
 		showInMenu: true,
 		icon: 'MoveToInbox',
 	},
@@ -36,7 +35,7 @@ export const appRouters = [
 		title: 'Home',
 		icon: 'MoveToInbox',
 		component: LoadableComponent(() =>
-			import('../Layouts/AppLayout')
+			import('../layouts/AppLayout')
 		),
 		isLayout: true,
 		showInMenu: true,
@@ -49,7 +48,7 @@ export const appRouters = [
 		name: 'Login',
 		icon: 'MoveToInbox',
 		showInMenu: false,
-		component: LoadableComponent(() => import('../Pages/Login')),
+		component: LoadableComponent(() => import('../pages/Login')),
 	},
 	{
 		path: '/home',
@@ -59,7 +58,7 @@ export const appRouters = [
 		name: 'home',
 		icon: 'MoveToInbox',
 		showInMenu: true,
-		component: LoadableComponent(() => import('../Pages/Home')),
+		component: LoadableComponent(() => import('../pages/Home')),
 	},
 	{
 		path: '/exception',
@@ -70,7 +69,7 @@ export const appRouters = [
 		icon: 'MoveToInbox',
 		showInMenu: false,
 		component: LoadableComponent(() =>
-			import('../Pages/Exception')
+			import('../pages/Exception')
 		),
 	},
 ];

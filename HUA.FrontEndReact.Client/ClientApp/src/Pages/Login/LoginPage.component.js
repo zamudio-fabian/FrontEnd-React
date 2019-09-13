@@ -2,7 +2,7 @@ import * as React from 'react';
 import Grid from '@material-ui/core/Grid';
 import { connect } from 'react-redux';
 import { Redirect, withRouter } from 'react-router-dom';
-import LoginForm from '../../Components/LoginForm';
+import LoginForm from '../../components/LoginForm';
 
 class LoginPage extends React.Component {
 	render() {

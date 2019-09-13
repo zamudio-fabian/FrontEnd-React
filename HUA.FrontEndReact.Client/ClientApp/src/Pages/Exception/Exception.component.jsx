@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import Avatar from '@material-ui/core/Avatar';
 import Grid from '@material-ui/core/Grid';
 import Button from '@material-ui/core/Button';
-import './Exception.style.css';
+import './Exception.style.scss';
 
 class Exception extends React.Component {
 	render() {

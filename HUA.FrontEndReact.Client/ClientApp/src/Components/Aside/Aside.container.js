@@ -6,8 +6,8 @@ import Divider from '@material-ui/core/Divider';
 import ListItem from '@material-ui/core/ListItem';
 import ListItemText from '@material-ui/core/ListItemText';
 import { Link } from 'react-router-dom';
-import { routers } from '../../Router/router.config';
-import SessionService from '../../Services/SessionService';
+import { routers } from '../../router/router.config';
+import SessionService from '../../services/SessionService';
 
 const drawerWidth = 240;
 

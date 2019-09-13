@@ -4,10 +4,10 @@ import { makeStyles } from '@material-ui/core/styles';
 import DocumentTitle from 'react-document-title';
 import CssBaseline from '@material-ui/core/CssBaseline';
 import Grid from '@material-ui/core/Grid';
-import Header from '../../Components/Header';
-import Aside from '../../Components/Aside';
-import { appRouters } from '../../Router/router.config';
-import Utils from '../../lib/Utils';
+import Header from '../../components/Header';
+import Aside from '../../components/Aside';
+import { appRouters } from '../../router/router.config';
+import Utils from '../../utils/Utils';
 import './AppLayout.style.css';
 
 const useStyles = makeStyles(() => ({

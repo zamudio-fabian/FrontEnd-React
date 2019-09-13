@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { Redirect, Route } from 'react-router-dom';
 import { connect } from 'react-redux';
-import SessionService from '../Services/SessionService';
+import SessionService from '../services/SessionService';
 
 const ProtectedRoute = ({
 	path,
