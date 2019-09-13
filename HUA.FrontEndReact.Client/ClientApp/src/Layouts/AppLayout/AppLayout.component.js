@@ -4,6 +4,7 @@ import DocumentTitle from 'react-document-title';
 import Grid from '@material-ui/core/Grid';
 import Footer from '../../Components/Footer';
 import Header from '../../Components/Header';
+import Aside from '../../Components/Aside';
 import { appRouters } from '../../Router/router.config';
 import Utils from '../../lib/Utils';
 import './AppLayout.style.css';
@@ -37,46 +38,60 @@ class AppLayout extends React.Component {
 		const { collapsed } = this.state;
 		const layout = (
 			<Grid>
-				<Grid className="headerContainer">
-					<Header
-						routes={this.routes}
-						collapsed={collapsed}
-						toggle={this.toggle}
-					/>
-				</Grid>
-				<Grid className="mainContainer">
-					<Switch>
-						{appRouters
-							.filter(
-								(item) =>
-									!item.isLayout
-							)
-							.map((route, index) => (
-								<Route
-									exact={
-										route.exact
-									}
-									key={
+				<Header
+					routes={this.routes}
+					collapsed={collapsed}
+					toggle={this.toggle}
+				/>
+				<Grid
+					container
+					className="main"
+					direction="row"
+					justify="flex-start"
+					alignItems="flex-start">
+					<Aside />
+					<Grid className="flex">
+						<Switch>
+							{appRouters
+								.filter(
+									(
+										item
+									) =>
+										!item.isLayout
+								)
+								.map(
+									(
+										route,
 										index
-									}
-									path={
-										route.path
-									}
-									component={
-										route.component
-									}
-									permission={
-										route.permission
-									}
-								/>
-							))}
+									) => (
+										<Route
+											exact={
+												route.exact
+											}
+											key={
+												index
+											}
+											path={
+												route.path
+											}
+											component={
+												route.component
+											}
+											permission={
+												route.permission
+											}
+										/>
+									)
+								)}
 
-						<Redirect
-							from="/"
-							to="/login"
-						/>
-					</Switch>
+							<Redirect
+								from="/"
+								to="/login"
+							/>
+						</Switch>
+					</Grid>
 				</Grid>
+
 				<Grid className="footerContainer">
 					<Footer />
 				</Grid>

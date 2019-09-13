@@ -1,49 +1,26 @@
 import React from 'react';
-import clsx from 'clsx';
-import { fade, makeStyles } from '@material-ui/core/styles';
-// import MaterialIcon from '../MaterialIconAsync';
+import CssBaseline from '@material-ui/core/CssBaseline';
+import { makeStyles } from '@material-ui/core/styles';
 import AppBar from '@material-ui/core/AppBar';
 import IconButton from '@material-ui/core/IconButton';
-import InputBase from '@material-ui/core/InputBase';
 import Badge from '@material-ui/core/Badge';
 import MenuItem from '@material-ui/core/MenuItem';
 import Menu from '@material-ui/core/Menu';
 import Button from '@material-ui/core/Button';
-import MenuIcon from '@material-ui/icons/Menu';
-import SearchIcon from '@material-ui/icons/Search';
 import MailIcon from '@material-ui/icons/Mail';
 import NotificationsIcon from '@material-ui/icons/Notifications';
 import Avatar from '@material-ui/core/Avatar';
 import MoreIcon from '@material-ui/icons/MoreVert';
-import Drawer from '@material-ui/core/Drawer';
 import Toolbar from '@material-ui/core/Toolbar';
-import List from '@material-ui/core/List';
-import Typography from '@material-ui/core/Typography';
 import Divider from '@material-ui/core/Divider';
-import ChevronLeftIcon from '@material-ui/icons/ChevronLeft';
-import ListItem from '@material-ui/core/ListItem';
-import ListItemText from '@material-ui/core/ListItemText';
 import { Link } from 'react-router-dom';
-import { routers } from '../../Router/router.config';
 import logo from '../../Images/user.png';
-import SessionService from '../../Services/SessionService';
 
 const drawerWidth = 240;
 
 const useStyles = makeStyles((theme) => ({
 	appBar: {
-		transition: theme.transitions.create(['margin', 'width'], {
-			easing: theme.transitions.easing.sharp,
-			duration: theme.transitions.duration.leavingScreen,
-		}),
-	},
-	appBarShift: {
-		width: `calc(100% - ${drawerWidth}px)`,
-		marginLeft: drawerWidth,
-		transition: theme.transitions.create(['margin', 'width'], {
-			easing: theme.transitions.easing.easeOut,
-			duration: theme.transitions.duration.enteringScreen,
-		}),
+		zIndex: theme.zIndex.drawer + 1,
 	},
 	grow: {
 		flexGrow: 1,
@@ -55,41 +32,6 @@ const useStyles = makeStyles((theme) => ({
 		display: 'none',
 		[theme.breakpoints.up('sm')]: {
 			display: 'block',
-		},
-	},
-	search: {
-		position: 'relative',
-		borderRadius: theme.shape.borderRadius,
-		backgroundColor: fade(theme.palette.common.white, 0.15),
-		'&:hover': {
-			backgroundColor: fade(theme.palette.common.white, 0.25),
-		},
-		marginRight: theme.spacing(2),
-		marginLeft: 0,
-		width: '100%',
-		[theme.breakpoints.up('sm')]: {
-			marginLeft: theme.spacing(3),
-			width: 'auto',
-		},
-	},
-	searchIcon: {
-		width: theme.spacing(7),
-		height: '100%',
-		position: 'absolute',
-		pointerEvents: 'none',
-		display: 'flex',
-		alignItems: 'center',
-		justifyContent: 'center',
-	},
-	inputRoot: {
-		color: 'inherit',
-	},
-	inputInput: {
-		padding: theme.spacing(1, 1, 1, 7),
-		transition: theme.transitions.create('width'),
-		width: '100%',
-		[theme.breakpoints.up('md')]: {
-			width: 200,
 		},
 	},
 	sectionDesktop: {
@@ -111,6 +53,7 @@ const useStyles = makeStyles((theme) => ({
 		...theme.mixins.toolbar,
 		justifyContent: 'flex-end',
 	},
+	toolbar: theme.mixins.toolbar,
 	drawer: {
 		width: drawerWidth,
 		flexShrink: 0,
@@ -126,7 +69,6 @@ export default function PrimarySearchAppBar(props) {
 	const [mobileMoreAnchorEl, setMobileMoreAnchorEl] = React.useState(
 		null
 	);
-	const [open, setOpen] = React.useState(false);
 	const { user, logout } = props;
 	const isMenuOpen = Boolean(anchorEl);
 	const isMobileMenuOpen = Boolean(mobileMoreAnchorEl);
@@ -151,26 +93,6 @@ export default function PrimarySearchAppBar(props) {
 
 	function handleMobileMenuOpen(event) {
 		setMobileMoreAnchorEl(event.currentTarget);
-	}
-
-	function handleDrawerOpen() {
-		setOpen(true);
-	}
-
-	function handleDrawerClose() {
-		setOpen(false);
-	}
-
-	function notDisplayInMenu(route) {
-		const display =
-			(route.permission &&
-				!SessionService.isGranted(
-					user,
-					route.permission
-				)) ||
-			(route.requiredAuthentication &&
-				!SessionService.isAuthenticated(user));
-		return display;
 	}
 
 	const menuId = 'primary-search-account-menu';
@@ -247,54 +169,12 @@ export default function PrimarySearchAppBar(props) {
 
 	return (
 		<div className={classes.grow}>
+			<CssBaseline />
 			<AppBar
 				elevation={0}
 				position="fixed"
-				className={clsx(classes.appBar, {
-					[classes.appBarShift]: open,
-				})}>
+				className={classes.appBar}>
 				<Toolbar>
-					{!open && (
-						<IconButton
-							edge="start"
-							className={
-								classes.menuButton
-							}
-							color="inherit"
-							onClick={
-								handleDrawerOpen
-							}
-							aria-label="open drawer">
-							<MenuIcon />
-						</IconButton>
-					)}
-					<Typography
-						className={classes.title}
-						variant="h6"
-						noWrap>
-						React App
-					</Typography>
-					<div className={classes.search}>
-						<div
-							className={
-								classes.searchIcon
-							}>
-							<SearchIcon />
-						</div>
-						<InputBase
-							placeholder="Search…"
-							classes={{
-								root:
-									classes.inputRoot,
-								input:
-									classes.inputInput,
-							}}
-							inputProps={{
-								'aria-label':
-									'search',
-							}}
-						/>
-					</div>
 					<div className={classes.grow} />
 					{user.username === undefined && (
 						<Button
@@ -367,66 +247,7 @@ export default function PrimarySearchAppBar(props) {
 					</div>
 				</Toolbar>
 			</AppBar>
-			<Drawer
-				className={classes.drawer}
-				variant="persistent"
-				anchor="left"
-				open={open}
-				classes={{
-					paper: classes.drawerPaper,
-				}}>
-				<div className={classes.drawerHeader}>
-					<IconButton onClick={handleDrawerClose}>
-						<ChevronLeftIcon />
-					</IconButton>
-				</div>
-				<Divider />
-				<List>
-					{routers
-						.filter(
-							(item) =>
-								!item.isLayout &&
-								item.showInMenu
-						)
-						.map((route) => {
-							if (
-								notDisplayInMenu(
-									route
-								)
-							)
-								return null;
-							return (
-								<Link
-									onClick={() => {
-										handleDrawerClose();
-									}}
-									to={
-										route.path
-									}
-									style={{
-										textDecoration:
-											'none',
-									}}
-									key={
-										route.title
-									}>
-									<ListItem
-										button
-										key={
-											route.title
-										}>
-										{/* <ListItemIcon>{Icons['MoveToInbox']}</ListItemIcon> */}
-										<ListItemText
-											primary={
-												route.title
-											}
-										/>
-									</ListItem>
-								</Link>
-							);
-						})}
-				</List>
-			</Drawer>
+
 			{renderMobileMenu}
 			{renderMenu}
 		</div>
