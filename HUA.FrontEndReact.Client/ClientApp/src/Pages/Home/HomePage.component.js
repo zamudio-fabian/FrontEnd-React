@@ -1,6 +1,5 @@
 import * as React from 'react';
 import Grid from '@material-ui/core/Grid';
-import GitHubSearch from '../../Components/GitHubSearch';
 
 class HomePage extends React.Component {
 	render() {
@@ -12,7 +11,7 @@ class HomePage extends React.Component {
 				justify="flex-start"
 				alignItems="stretch">
 				<Grid className="h100" item xs={12}>
-					<GitHubSearch />
+					asdsd
 				</Grid>
 			</Grid>
 		);

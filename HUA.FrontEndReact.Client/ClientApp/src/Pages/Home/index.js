@@ -1,3 +1,3 @@
-import Component from './TodoList.component';
+import Component from './HomePage.component';
 
 export default Component;

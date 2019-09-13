@@ -61,7 +61,7 @@ export default function AppLayout(props) {
 								/>
 							))}
 
-						<Redirect from="/" to="/" />
+						<Redirect from="/" to="/home" />
 					</Switch>
 				</main>
 			</Grid>

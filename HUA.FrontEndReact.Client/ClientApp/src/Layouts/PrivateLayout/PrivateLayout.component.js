@@ -87,7 +87,7 @@ class PrivateLayout extends React.Component {
 
 							<Redirect
 								from="/"
-								to="/"
+								to="/home"
 							/>
 						</Switch>
 					</Grid>
