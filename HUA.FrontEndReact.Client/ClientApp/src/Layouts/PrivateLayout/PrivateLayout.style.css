@@ -1,0 +1,17 @@
+.headerContainer {
+}
+
+.mainContainer {
+	height: calc(100vh - 85px);
+	padding-top: 65px;
+	overflow: hidden;
+}
+
+.footerContainer {
+	height: 30px;
+	background: #e8e8e8;
+	position: fixed;
+	margin-top: 0px;
+	width: 100%;
+	bottom: 0;
+}

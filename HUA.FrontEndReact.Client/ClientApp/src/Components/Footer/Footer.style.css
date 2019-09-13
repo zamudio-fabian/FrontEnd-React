@@ -1,0 +1,7 @@
+.footer {
+	position: sticky;
+	left: 0;
+	bottom: 64px;
+	width: 100%;
+	text-align: center;
+}

@@ -1,0 +1,16 @@
+.card {
+	min-width: 275;
+	margin: 500;
+	margin-top: 10%;
+	max-width: 350px;
+	width: 100%;
+	padding: 15px;
+}
+
+.form-card-actions {
+	justify-content: center;
+}
+
+.login-bg {
+	background-color: #eff0f1;
+}

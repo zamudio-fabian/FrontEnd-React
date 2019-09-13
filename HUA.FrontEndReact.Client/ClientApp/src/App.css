@@ -1,0 +1,170 @@
+.App {
+	text-align: center;
+}
+
+.App-logo {
+	animation: App-logo-spin infinite 20s linear;
+	height: 40vmin;
+	pointer-events: none;
+}
+
+.App-header {
+	background-color: #282c34;
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	font-size: calc(10px + 2vmin);
+	color: white;
+}
+
+.App-link {
+	color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+	from {
+		transform: rotate(0deg);
+	}
+	to {
+		transform: rotate(360deg);
+	}
+}
+
+.h100 {
+	height: 100%;
+}
+
+.w100 {
+	width: 100%;
+}
+
+.scroll-section {
+	height: 100%;
+	overflow: auto;
+}
+
+.pointer {
+	cursor: pointer;
+}
+
+.center-content {
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: auto;
+	margin-bottom: auto;
+}
+
+.text-center {
+	text-align: center;
+}
+
+.code-snippet-container {
+	background-color: #eff0f1;
+	padding: 5px;
+	margin: 5px;
+	overflow: auto;
+}
+
+.mb-0 {
+	margin-bottom: 0;
+}
+.mb-1 {
+	margin-bottom: 10px;
+}
+.mb-2 {
+	margin-bottom: 20px;
+}
+.mb-3 {
+	margin-bottom: 30px;
+}
+.mb-4 {
+	margin-bottom: 40px;
+}
+.mb-5 {
+	margin-bottom: 50px;
+}
+
+.mt-0 {
+	margin-top: 0;
+}
+.mt-1 {
+	margin-top: 10px;
+}
+.mt-2 {
+	margin-top: 20px;
+}
+.mt-3 {
+	margin-top: 30px;
+}
+.mt-4 {
+	margin-top: 40px;
+}
+.mt-5 {
+	margin-top: 50px;
+}
+
+.mr-0 {
+	margin-right: 0;
+}
+.mr-1 {
+	margin-right: 10px;
+}
+.mr-2 {
+	margin-right: 20px;
+}
+.mr-3 {
+	margin-right: 30px;
+}
+.mr-4 {
+	margin-right: 40px;
+}
+.mr-5 {
+	margin-right: 50px;
+}
+
+.ml-0 {
+	margin-left: 0;
+}
+.ml-1 {
+	margin-left: 10px;
+}
+.ml-2 {
+	margin-left: 20px;
+}
+.ml-3 {
+	margin-left: 30px;
+}
+.ml-4 {
+	margin-left: 40px;
+}
+.ml-5 {
+	margin-left: 50px;
+}
+
+.text-with-dots {
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
+.right-divider {
+	border-right: solid 1px #c6c4c4;
+}
+
+.left-divider {
+	border-left: solid 1px #c6c4c4;
+}
+
+.top-divider {
+	border-top: solid 1px #c6c4c4;
+}
+
+.bottom-divider {
+	border-bottom: solid 1px #c6c4c4;
+}
+
+.relative {
+	position: relative;
+}
