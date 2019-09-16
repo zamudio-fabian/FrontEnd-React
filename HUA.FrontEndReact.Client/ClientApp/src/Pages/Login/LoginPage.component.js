@@ -8,7 +8,7 @@ class LoginPage extends React.Component {
 	render() {
 		const { user } = this.props;
 		if (user.username !== undefined) {
-			return <Redirect to="/" />;
+			return <Redirect to="/private" />;
 		}
 		return (
 			<Grid

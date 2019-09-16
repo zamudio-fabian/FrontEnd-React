@@ -5,7 +5,6 @@ import DocumentTitle from 'react-document-title';
 import CssBaseline from '@material-ui/core/CssBaseline';
 import Grid from '@material-ui/core/Grid';
 import Header from '../../components/Header';
-import Aside from '../../components/Aside';
 import { appRouters } from '../../router/router.config';
 import Utils from '../../utils/Utils';
 import './AppLayout.style.css';
@@ -33,7 +32,6 @@ export default function AppLayout(props) {
 				direction="row"
 				justify="flex-start"
 				alignItems="flex-start">
-				<Aside className="h100" />
 				<main className="main">
 					<Switch>
 						{appRouters
@@ -61,7 +59,10 @@ export default function AppLayout(props) {
 								/>
 							))}
 
-						<Redirect from="/" to="/home" />
+						<Redirect
+							from="/"
+							to="/login"
+						/>
 					</Switch>
 				</main>
 			</Grid>
