@@ -1,11 +1,12 @@
 import * as React from 'react';
 import Grid from '@material-ui/core/Grid';
+import './Home.scss';
 
 class HomePage extends React.Component {
 	render() {
 		return (
 			<Grid
-				className="h100"
+				className="h100 background-image"
 				container
 				direction="row"
 				justify="flex-start"

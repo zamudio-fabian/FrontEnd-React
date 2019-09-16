@@ -16,6 +16,12 @@ import Divider from '@material-ui/core/Divider';
 import { Link } from 'react-router-dom';
 import classNames from 'classnames';
 import logo from '../../images/user.png';
+import Typography from '@material-ui/core/Typography';
+import Icon from '@material-ui/core/Icon';
+import MenuIcon from '@material-ui/icons/Menu';
+import Grid from '@material-ui/core/Grid';
+import '../../../src/layouts/PrivateLayout/PrivateLayout.style.css';
+import huaLogo from '../../images/Logo-Hospital-Blanco.svg';
 
 const drawerWidth = 240;
 
@@ -176,6 +182,11 @@ export default function PrimarySearchAppBar(props) {
 				position="fixed"
 				className={classes.appBar}>
 				<Toolbar className={classNames('AppBar')}>
+					<img
+						src={huaLogo}
+						className="logo-image"
+					/>
+
 					<div className={classes.grow} />
 					{user.username === undefined && (
 						<Button
