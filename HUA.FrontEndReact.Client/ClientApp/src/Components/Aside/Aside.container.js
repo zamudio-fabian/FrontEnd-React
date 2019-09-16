@@ -30,6 +30,7 @@ const useStyles = makeStyles((theme) => ({
 	},
 	drawerPaper: {
 		width: drawerWidth,
+		borderRight: '1px solid rgba(0, 0, 0, 0.3) !important',
 	},
 }));
 

@@ -39,16 +39,6 @@ export const appRouters = [
 		component: LoadableComponent(() => import('../pages/Login')),
 	},
 	{
-		path: '/home',
-		exact: true,
-		permission: [],
-		title: 'Home',
-		name: 'home',
-		icon: 'MoveToInbox',
-		showInMenu: false,
-		component: LoadableComponent(() => import('../pages/Home')),
-	},
-	{
 		path: '/exception',
 		exact: false,
 		permission: [],

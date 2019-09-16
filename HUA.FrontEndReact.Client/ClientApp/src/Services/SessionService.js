@@ -116,7 +116,7 @@ const login = (username, password, history) => {
 						username
 					),
 				}).then(() => {
-					history.push('/');
+					history.push('/private');
 				});
 			})
 			.catch((err) => console.error(err));
