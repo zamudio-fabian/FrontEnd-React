@@ -1,5 +1,6 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
+import { NavLink } from 'react-router-dom';
 import Drawer from '@material-ui/core/Drawer';
 import List from '@material-ui/core/List';
 import Divider from '@material-ui/core/Divider';
@@ -9,6 +10,7 @@ import Link from '@material-ui/core/Link';
 import { routers } from '../../router/router.config';
 import SessionService from '../../services/SessionService';
 import Utils from '../../utils/Utils';
+import './Aside.style.scss';
 
 const drawerWidth = 240;
 
@@ -70,8 +72,9 @@ export default function AsideComponent(props) {
 						if (notDisplayInMenu(route))
 							return null;
 						return (
-							<Link
+							<NavLink
 								to={route.path}
+								activeClassName="is-active-nav-link"
 								style={{
 									textDecoration:
 										'none',
@@ -91,7 +94,7 @@ export default function AsideComponent(props) {
 										}
 									/>
 								</ListItem>
-							</Link>
+							</NavLink>
 						);
 					})}
 				{user.permissions &&

@@ -1,5 +1,6 @@
 import React from 'react';
 import CssBaseline from '@material-ui/core/CssBaseline';
+import classNames from 'classnames';
 import { makeStyles } from '@material-ui/core/styles';
 import AppBar from '@material-ui/core/AppBar';
 import IconButton from '@material-ui/core/IconButton';
@@ -14,14 +15,9 @@ import MoreIcon from '@material-ui/icons/MoreVert';
 import Toolbar from '@material-ui/core/Toolbar';
 import Divider from '@material-ui/core/Divider';
 import { Link } from 'react-router-dom';
-import classNames from 'classnames';
 import logo from '../../images/user.png';
-import Typography from '@material-ui/core/Typography';
-import Icon from '@material-ui/core/Icon';
-import MenuIcon from '@material-ui/icons/Menu';
-import Grid from '@material-ui/core/Grid';
-import '../../../src/layouts/PrivateLayout/PrivateLayout.style.css';
 import huaLogo from '../../images/Logo-Hospital-Blanco.svg';
+import './Header.style.scss';
 
 const drawerWidth = 240;
 
@@ -183,6 +179,7 @@ export default function PrimarySearchAppBar(props) {
 				className={classes.appBar}>
 				<Toolbar className={classNames('AppBar')}>
 					<img
+						alt="brand logo"
 						src={huaLogo}
 						className="logo-image"
 					/>

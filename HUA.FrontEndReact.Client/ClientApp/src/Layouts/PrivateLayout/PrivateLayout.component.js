@@ -7,7 +7,7 @@ import Aside from '../../components/Aside';
 import ProtectedRoute from '../../router/ProtectedRoute';
 import { privateRouters } from '../../router/router.config';
 import Utils from '../../utils/Utils';
-import './PrivateLayout.style.css';
+import './PrivateLayout.style.scss';
 import '../../pages/Home/Home.scss';
 
 class PrivateLayout extends React.Component {
