@@ -309,3 +309,5 @@ chrome-user-data
 *.swp
 *.swo
 .env
+
+package-lock.json
