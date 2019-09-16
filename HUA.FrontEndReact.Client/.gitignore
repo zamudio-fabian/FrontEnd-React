@@ -232,4 +232,4 @@ _Pvt_Extensions
 
 # FAKE - F# Make
 .fake/
-HUA.OpenEHRReact.Client/ClientApp/package-lock.json
+HUA.FrontEndReact.Client/ClientApp/package-lock.json
