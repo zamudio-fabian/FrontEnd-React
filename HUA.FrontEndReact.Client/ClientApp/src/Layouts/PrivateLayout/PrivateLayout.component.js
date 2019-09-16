@@ -8,6 +8,7 @@ import ProtectedRoute from '../../router/ProtectedRoute';
 import { privateRouters } from '../../router/router.config';
 import Utils from '../../utils/Utils';
 import './PrivateLayout.style.css';
+import '../../pages/Home/Home.scss';
 
 class PrivateLayout extends React.Component {
 	constructor(props) {
@@ -51,7 +52,7 @@ class PrivateLayout extends React.Component {
 					justify="flex-start"
 					alignItems="flex-start">
 					<Aside />
-					<Grid className="flex">
+					<Grid className="flex background-image">
 						<Switch>
 							{privateRouters
 								.filter(
