@@ -15,6 +15,24 @@ class Utils {
 	getRoute = (path) => {
 		return routers.filter((route) => route.path === path)[0];
 	};
+
+	getRouteByName = (name) => {
+		return routers.filter((route) => route.name === name)[0];
+	};
+
+	getRoutesByPermissions = (permissions) => {
+		const response = permissions.map((permission) => {
+			return {
+				title: permission.name,
+				icon: 'MoveToInbox',
+				path: permission.link,
+				permission: [],
+				requiredAuthentication: true,
+			};
+		});
+
+		return response;
+	};
 }
 
 export default new Utils();

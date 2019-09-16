@@ -14,6 +14,7 @@ import MoreIcon from '@material-ui/icons/MoreVert';
 import Toolbar from '@material-ui/core/Toolbar';
 import Divider from '@material-ui/core/Divider';
 import { Link } from 'react-router-dom';
+import classNames from 'classnames';
 import logo from '../../images/user.png';
 
 const drawerWidth = 240;
@@ -174,7 +175,7 @@ export default function PrimarySearchAppBar(props) {
 				elevation={0}
 				position="fixed"
 				className={classes.appBar}>
-				<Toolbar>
+				<Toolbar className={classNames('AppBar')}>
 					<div className={classes.grow} />
 					{user.username === undefined && (
 						<Button

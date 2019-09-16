@@ -5,9 +5,10 @@ import List from '@material-ui/core/List';
 import Divider from '@material-ui/core/Divider';
 import ListItem from '@material-ui/core/ListItem';
 import ListItemText from '@material-ui/core/ListItemText';
-import { Link } from 'react-router-dom';
+import Link from '@material-ui/core/Link';
 import { routers } from '../../router/router.config';
 import SessionService from '../../services/SessionService';
+import Utils from '../../utils/Utils';
 
 const drawerWidth = 240;
 
@@ -32,7 +33,7 @@ const useStyles = makeStyles((theme) => ({
 	},
 }));
 
-export default function PrimarySearchAppBar(props) {
+export default function AsideComponent(props) {
 	const classes = useStyles();
 	const { user } = props;
 
@@ -83,6 +84,38 @@ export default function PrimarySearchAppBar(props) {
 										route.title
 									}>
 									{/* <ListItemIcon>{Icons['MoveToInbox']}</ListItemIcon> */}
+									<ListItemText
+										primary={
+											route.title
+										}
+									/>
+								</ListItem>
+							</Link>
+						);
+					})}
+				{user.permissions &&
+					Utils.getRoutesByPermissions(
+						user.permissions
+					).map((route) => {
+						if (notDisplayInMenu(route))
+							return null;
+						return (
+							<Link
+								href={
+									route.path
+								}
+								style={{
+									textDecoration:
+										'none',
+								}}
+								key={
+									route.title
+								}>
+								<ListItem
+									button
+									key={
+										route.title
+									}>
 									<ListItemText
 										primary={
 											route.title

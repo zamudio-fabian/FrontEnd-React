@@ -5,24 +5,13 @@ export const privateRouters = [
 		path: '/private',
 		exact: true,
 		permission: [],
-		name: 'private',
+		name: 'privateLayout',
 		title: 'Private',
 		component: LoadableComponent(() =>
 			import('../layouts/PrivateLayout')
 		),
 		isLayout: true,
-		showInMenu: false,
-	},
-	{
-		path: '/private/admin',
-		exact: true,
-		permission: ['ADMIN'],
-		requiredAuthentication: true,
-		name: 'private',
-		title: 'Private admin',
-		component: LoadableComponent(() => import('../pages/Home')),
 		showInMenu: true,
-		icon: 'MoveToInbox',
 	},
 ];
 
@@ -30,10 +19,9 @@ export const appRouters = [
 	{
 		path: '/',
 		exact: true,
-		name: 'home',
+		name: 'baseLayout',
 		permission: [],
 		title: 'Home',
-		icon: 'MoveToInbox',
 		component: LoadableComponent(() =>
 			import('../layouts/AppLayout')
 		),
@@ -57,7 +45,7 @@ export const appRouters = [
 		title: 'Home',
 		name: 'home',
 		icon: 'MoveToInbox',
-		showInMenu: true,
+		showInMenu: false,
 		component: LoadableComponent(() => import('../pages/Home')),
 	},
 	{

@@ -4,8 +4,8 @@ import ProtectedRoute from './ProtectedRoute';
 import Utils from '../utils/Utils';
 
 const Router = () => {
-	const AppLayout = Utils.getRoute('/').component;
-	const PrivateLayout = Utils.getRoute('/private').component;
+	const AppLayout = Utils.getRouteByName('baseLayout').component;
+	const PrivateLayout = Utils.getRouteByName('privateLayout').component;
 
 	return (
 		<Switch>

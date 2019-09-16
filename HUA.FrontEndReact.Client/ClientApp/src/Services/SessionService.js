@@ -63,10 +63,20 @@ const getPermissionsByUsername = (username) => {
 		case 'fzamudio':
 		case 'jsantoro':
 		case 'luvargas':
-			return ['DEVELOPER'];
+			return [
+				{
+					name: 'Open EHR',
+					link: 'https://www.google.com/',
+				},
+			];
 		case 'lolguin':
 		case 'epeluffo':
-			return ['ADMIN'];
+			return [
+				{
+					title: 'Open EHR',
+					link: 'https://www.google.com/',
+				},
+			];
 		default:
 			return [];
 	}
