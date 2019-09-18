@@ -81,7 +81,7 @@ export default function PrimarySearchAppBar(props) {
 	}
 
 	function handleMobileMenuClose() {
-		setMobileMoreAnchorEl(null);
+		if (setMobileMoreAnchorEl !== null) setMobileMoreAnchorEl(null);
 	}
 
 	function handleMenuClose() {
