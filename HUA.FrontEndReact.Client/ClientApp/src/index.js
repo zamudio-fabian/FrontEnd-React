@@ -1,4 +1,5 @@
 import React from 'react';
+import 'typeface-roboto';
 import ReactDOM from 'react-dom';
 import * as moment from 'moment';
 import { Provider } from 'react-redux';

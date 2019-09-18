@@ -73,12 +73,12 @@ export default function AsideComponent(props) {
 							return null;
 						return (
 							<NavLink
+								title={
+									route.title
+								}
 								to={route.path}
 								activeClassName="is-active-nav-link"
-								style={{
-									textDecoration:
-										'none',
-								}}
+								className="aside-nav-link"
 								key={
 									route.title
 								}>
@@ -87,8 +87,13 @@ export default function AsideComponent(props) {
 									key={
 										route.title
 									}>
-									{/* <ListItemIcon>{Icons['MoveToInbox']}</ListItemIcon> */}
+									{/* <ListItemIcon className="aside-warpper-nav-link"><RouteIcon
+											style={{
+												fontSize: 22,
+											}}
+										/></ListItemIcon> */}
 									<ListItemText
+										className="aside-link-text"
 										primary={
 											route.title
 										}
@@ -105,13 +110,13 @@ export default function AsideComponent(props) {
 							return null;
 						return (
 							<Link
+								title={
+									route.title
+								}
+								className="aside-nav-link"
 								href={
 									route.path
 								}
-								style={{
-									textDecoration:
-										'none',
-								}}
 								key={
 									route.title
 								}>
@@ -120,7 +125,13 @@ export default function AsideComponent(props) {
 									key={
 										route.title
 									}>
+									{/* <ListItemIcon className="aside-warpper-nav-link"><RouteIcon
+											style={{
+												fontSize: 22,
+											}}
+										/></ListItemIcon> */}
 									<ListItemText
+										className="aside-link-text"
 										primary={
 											route.title
 										}

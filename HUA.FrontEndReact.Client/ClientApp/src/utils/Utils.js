@@ -4,7 +4,7 @@ import { routers } from '../router/router.config';
 class Utils {
 	getPageTitle = (pathname) => {
 		const route = routers.filter((r) => r.path === pathname);
-		const localizedAppName = 'AppName';
+		const localizedAppName = process.env.REACT_APP_APP_NAME;
 		if (!route || route.length === 0) {
 			return localizedAppName;
 		}
